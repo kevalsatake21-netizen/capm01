@@ -1,0 +1,32 @@
+get http://localhost:4004/odata/v4/catalog/Books
+
+###
+get http://localhost:4004/odata/v4/catalog/Books(1d6950a1-115b-4182-a3de-c01416b264fa)
+
+###insert a new book
+POST http://localhost:4004/odata/V4/Catalog/Books
+Content-Type: application/json
+
+{
+  "title": "LIGAMENT 5",
+  "author": "Keval",
+  "price": 1111,
+  "stock": 14
+}
+
+###update a book
+PATCH http://localhost:4004/odata/V4/Catalog/Books(1b21a5b3-8fdf-4c54-9923-f25167d0fc75)
+Content-Type: application/json
+
+{
+  "title": "Atomic Habbits",
+  "author": "Rishi",
+  "price": 130,
+  "stock": 13
+}
+
+
+###delete a book
+DELETE http://localhost:4004/odata/V4/Catalog/Books(1d6950a1-115b-4182-a3de-c01416b264fa)
+
+ 
